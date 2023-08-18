@@ -36,7 +36,10 @@ app.use('/api/books', bookRouter);
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
 });
-
+// Catch-all route for serving the React app
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
+});
 // error middleware handler
 app.use(error.errorMiddleware);
 
