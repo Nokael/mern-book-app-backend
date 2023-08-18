@@ -22,7 +22,7 @@ app.use(cors({
 }));
 
 // Serve static files from the build directory
-app.use(express.static(path.resolve(__dirname, '../frontend/build')));
+app.use(express.static(path.resolve(__dirname, 'frontend/build')));
 
 
 //routes
@@ -34,7 +34,7 @@ app.use('/api/books', bookRouter);
 
 // Catch-all route for serving the React app
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'frontend/build', 'index.html'));
 });
 // Catch-all route for serving the React app
 app.get('*', (req, res) => {
