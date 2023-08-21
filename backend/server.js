@@ -18,7 +18,7 @@ dbConnect();
 app.use(express.json());
 
 app.use(cors({
-    origin: ["http://localhost:3000", "https://mern-stack-book-app.onrender.com"]
+    origin: ["http://localhost:3000", "https://mern-stack-books-app-a0na.onrender.com"]
 }));
 
 // Serve static files from the build directory
